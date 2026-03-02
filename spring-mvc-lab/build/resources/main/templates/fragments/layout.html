@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 
-<nav th:fragment="navbar" class="navbar navbar-dark bg-dark">
-    <div class="container d-flex justify-content-between align-items-center">
-        <a class="navbar-brand" th:href="@{/}">Spring MVC Lab</a>
-        <div class="d-flex gap-2">
-            <a class="text-white text-decoration-none px-2" th:href="@{/}">Home</a>
-            <a class="text-white text-decoration-none px-2" th:href="@{/products}">Produk</a>
-            <a class="text-white text-decoration-none px-2" th:href="@{/products/categories}">Kategori</a>
-            <a class="text-white text-decoration-none px-2" th:href="@{/about}">About</a>
-            <a class="text-white text-decoration-none px-2" th:href="@{/statistics}">Statistik</a>
+<nav
+        th:fragment="navbar"
+        class="sticky top-0 z-30 border-b border-slate-800 bg-slate-950/80 backdrop-blur"
+>
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
+        <a th:href="@{/}" class="flex items-center gap-2 text-sky-400 transition hover:text-sky-300">
+            <span
+                    class="flex h-8 w-8 items-center justify-center rounded-2xl border border-sky-500/40 bg-sky-500/10 text-xs font-semibold uppercase tracking-wide shadow-[0_0_25px_rgba(56,189,248,0.6)]"
+            >
+                MVC
+            </span>
+            <span class="text-sm font-semibold tracking-tight md:text-base">
+                Spring MVC Lab
+            </span>
+        </a>
+        <div class="flex items-center gap-2 text-xs font-medium text-slate-200 md:gap-4 md:text-sm">
+            <a th:href="@{/}"
+               class="rounded-full px-3 py-1.5 text-slate-200 transition hover:bg-slate-800 hover:text-sky-300">
+                Home
+            </a>
+            <a th:href="@{/products}"
+               class="rounded-full px-3 py-1.5 text-slate-200 transition hover:bg-slate-800 hover:text-sky-300">
+                Produk
+            </a>
+            <a th:href="@{/products/categories}"
+               class="rounded-full px-3 py-1.5 text-slate-200 transition hover:bg-slate-800 hover:text-sky-300">
+                Kategori
+            </a>
+            <a th:href="@{/about}"
+               class="rounded-full px-3 py-1.5 text-slate-200 transition hover:bg-slate-800 hover:text-sky-300">
+                About
+            </a>
+            <a th:href="@{/statistics}"
+               class="rounded-full px-3 py-1.5 text-slate-200 transition hover:bg-slate-800 hover:text-sky-300">
+                Statistik
+            </a>
         </div>
     </div>
 </nav>
 
-<footer th:fragment="footer" class="bg-light text-center py-3 mt-5">
-    <div class="container">
-        <p class="text-muted mb-0">
-            Spring MVC Lab &copy; 2026 | WEB-202 Week 4
+<footer
+        th:fragment="footer"
+        class="mt-12 border-t border-slate-900/80 bg-slate-950/80"
+>
+    <div class="mx-auto max-w-6xl px-4 py-6 text-center text-xs text-slate-500 md:text-sm">
+        <p>
+            Spring MVC Lab &copy; 2026 · WEB II - 2025 Week 4 · Powered by Tailwind CSS
         </p>
     </div>
 </footer>

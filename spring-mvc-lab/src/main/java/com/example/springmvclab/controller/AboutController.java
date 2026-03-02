@@ -17,7 +17,7 @@ public class AboutController {
         model.addAttribute("technologies", List.of(
                 "Spring Boot",
                 "Thymeleaf",
-                "Bootstrap",
+                "Tailwind CSS",
                 "Java 25"
         ));
         model.addAttribute("title", "About");
